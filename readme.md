@@ -1,4 +1,4 @@
-Official code and data repository of [_**UADB**: Unsupervised Anomaly Detection Booster].
+Official code and data repository of [**UADB**: Unsupervised Anomaly Detection Booster].
 __Please star, watch, and fork UADB for the active updates!__
 
 ## What is UADB?
