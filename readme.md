@@ -6,4 +6,4 @@ UADB is a booster for unsupervised anomaly detection (UAD) on tabular tasks.
 Note that UADB is not a universal winner on all taular tasks, however, it is a model-agnostic framework that can generally enhance any UAD on all types of tabular datasets in a unified way.
 
 ## Surprising effects on source UAD's decision boundaries.
-![image](figures/00)
+![image](figures/00case.png)
