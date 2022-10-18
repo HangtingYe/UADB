@@ -6,13 +6,13 @@ UADB is a booster for unsupervised anomaly detection (UAD) on tabular tasks.
 Note that UADB is not a universal winner on all taular tasks, however, it is a model-agnostic framework that can generally enhance any UAD on all types of tabular datasets in a unified way.
 
 ## How to train?
-# Prepare (create Results first)
+Prepare (create Results first)
 * ```mkdir Results```
 
-# Select the UAD that needs to be enhanced
+Select the UAD that needs to be enhanced
 * modify config.py
 
-# Run UADB
+Run UADB
 * ```python main.py```
 
 
