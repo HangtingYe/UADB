@@ -11,7 +11,7 @@ from sklearn.mixture import GaussianMixture
 from copulas.multivariate import VineCopula
 from copulas.univariate import GaussianKDE
 
-from adbench_utils import Utils
+from ad_utils import Utils
 
 # currently, data generator only supports for generating the binary classification datasets
 
