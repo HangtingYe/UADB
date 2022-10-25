@@ -9,12 +9,7 @@ for i in range(len(datasets)):
     datasets[i] = datasets[i].split('.')[0]   
 
 pseudo_models = ['pca', 'iforest', 'hbos', 'ocsvm', 'lof', 'cblof', 'cof', 'knn', 'sod', 'ecod', 'deep_svdd', 'loda', 'copod', 'gmm', 'vae']
-# pseudo_models = ['pca', 'iforest', 'hbos', 'ocsvm']
-# pseudo_models = ['lof', 'cblof', 'cof', 'knn']
-# pseudo_models = ['sod', 'ecod', 'deep_svdd', 'loda']
-# pseudo_models = ['copod', 'gmm']
 
-# experiment_types = ['uadb', 'base_mean', 'base_std', 'base_mean_cascade', 'base_std_cascade']
 experiment_types = ['uadb', 'base_mean', 'base_std', 'base_mean_cascade', 'base_std_cascade']
 
 gpu_cnt = 4
