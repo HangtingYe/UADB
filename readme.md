@@ -9,7 +9,7 @@ Note that UADB is not a universal winner on all taular tasks, however, it is a m
 Prepare (create Results first)
 * ```mkdir Results```
 
-Select the UAD that needs to be enhanced
+Select tabular data and source UAD needed to be enhanced
 * modify config.py
 
 Run UADB
