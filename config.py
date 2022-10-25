@@ -5,35 +5,36 @@ import argparse
 class Config(object):
     def __init__(self):
         # ------- Basic Arguments -------
-        self.seed = 0  # random seed
+        # random seed
+        self.seed = 0  
         self.log_file = 'none'
-
-        self.device = 'cuda:0'  # please set 'CUDA_VISIBLE_DEVICES' when calling python
+        # please set 'CUDA_VISIBLE_DEVICES' when calling python
+        self.device = 'cuda:0'
 
         # ------- Data Arguments -------
-        self.data_path = '33_shuttle'
+        # select one of the 84 tabular datasets
+        self.data_path = '33_shuttle'  
         self.realistic_synthetic_mode = 'none'
         self.noise_type = 'none'
         self.noise_ratio = 0.0
         self.duplicate_times = 1
-        self.pseudo_model = 'lof'
+        # select one of the 14 unsupervised anomaly detection models
+        self.pseudo_model = 'lof'  
 
         # ------- Optimization Arguments -------
-        # self.max_epochs = 10
         self.max_epochs = 10
         self.batch_size = 256
         self.learning_rate = 1e-3
         self.sampler_per_epoch = 10000
 
         # ------- Model Abasements -------
-        # mlp is the better than mlp_topk and co_teaching
         self.model = 'mlp'
         self.hidden_dim = 128
         self.output_dim = 32
         self.num_models = 1
         
         # ------- Experiments Settings -------
-        # uadb base_mean base_std
+        # uadb base_mean base_std base_mean_cascade base_std_cascade
         self.experiment_type = 'uadb'
         
     def update_by_dict(self, config_dict):
