@@ -16,7 +16,7 @@ Run UADB
 * ```python main.py```
 
 ## Mainstream Unsupervised Anomaly Detection Models.
-Isolation Forest (IForest) \cite{liu2008isolation} that isolates observations by randomly selecting a feature and a splitting point;
+Isolation Forest (IForest) [paper](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest)that isolates observations by randomly selecting a feature and a splitting point;
 
 Histogram-based outlier detection (HBOS) \cite{goldstein2012histogram} assumes the feature independence and calculates the degree of outlyingness by building histograms; 
 
