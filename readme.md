@@ -47,9 +47,6 @@ Deep Support Vector Data Description (DeepSVDD) [paper](http://proceedings.mlr.p
 For all source UAD models, we use their default parameters in their original papers (which have been fine-tuned to achieve the best performance).
 Please refer to [PyOD](https://pyod.readthedocs.io/en/latest/pyod.models.html) for more information.
 
-## Surprising effects on source UAD's decision boundaries.
-![image](figures/decision_boundary.png)
-
 ## Runtime of iterative training with 10 iterations on 84 tabular datasets.
 | Dataset            | time(seconds) |
 | ------------------ | ------------- |
@@ -137,3 +134,5 @@ Please refer to [PyOD](https://pyod.readthedocs.io/en/latest/pyod.models.html) f
 | 54_imdb            | 64.06704      |
 | 55_yelp            | 58.62         |
 
+## Surprising effects on source UAD's decision boundaries.
+![image](figures/decision_boundary.png)
