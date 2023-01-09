@@ -44,6 +44,8 @@ Copula Based Outlier Detector (COPOD) [paper](https://arxiv.org/pdf/2009.09463.p
 
 Deep Support Vector Data Description (DeepSVDD) [paper](http://proceedings.mlr.press/v80/ruff18a/ruff18a.pdf) trains a neural network while minimizing the volume of a hypersphere that encloses the network representations of the data, the distance of the transformed embedding to the hypersphere's center is used to calculate the anomaly score.
 
+For all source UAD models, we use their default parameters in their original papers (which have been fine-tuned to achieve the best performance).
+Please refer to [PyOD](https://pyod.readthedocs.io/en/latest/pyod.models.html) for more information.
 
 ## Surprising effects on source UAD's decision boundaries.
 ![image](figures/decision_boundary.png)
