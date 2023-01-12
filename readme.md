@@ -92,7 +92,7 @@ def get_init_labels(self):
 
 ## Runtime of iterative training with 10 iterations on 84 tabular datasets.
 For the default UADB Setup (i.e. 3-layer MLP, hidden dimension=128, epochs=10, batch size=256, learning rate=0.001, training iterations=10), the average runtime on 84 tabular datasets is 49 seconds, the minimum runtime is 32 seconds and maximum runtime is 65 seconds (evaluated on an NVIDIA Tesla V100 GPU with 16 GiB RAM).
-| Dataset            | time(seconds) |
+| Dataset            | time (seconds) |
 | ------------------ | ------------- |
 | 1_abalone          | 45.97332      |
 | 2_ALOI             | 62.09925      |
