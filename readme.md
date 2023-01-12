@@ -15,7 +15,7 @@ Select tabular data and source UAD needed to be enhanced
 Run UADB
 * ```python main.py```
 
-## Mainstream Unsupervised Anomaly Detection Models.
+## Mainstream Unsupervised Anomaly Detection (UAD) Models.
 Isolation Forest (IForest) [paper](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest) that isolates observations by randomly selecting a feature and a splitting point;
 
 Histogram-based outlier detection (HBOS) [paper](https://www.goldiges.de/publications/HBOS-KI-2012.pdf) assumes the feature independence and calculates the degree of outlyingness by building histograms; 
@@ -44,8 +44,41 @@ Copula Based Outlier Detector (COPOD) [paper](https://arxiv.org/pdf/2009.09463.p
 
 Deep Support Vector Data Description (DeepSVDD) [paper](http://proceedings.mlr.press/v80/ruff18a/ruff18a.pdf) trains a neural network while minimizing the volume of a hypersphere that encloses the network representations of the data, the distance of the transformed embedding to the hypersphere's center is used to calculate the anomaly score.
 
+## Parameters description of source UAD models.
 For all source UAD models, we use their default parameters in their original papers (which have been fine-tuned to achieve the best performance).
 Please refer to [PyOD](https://pyod.readthedocs.io/en/latest/pyod.models.html) for more information.
+The following codes show the example to import UAD models. Please see the Table for complete source UAD models included in UADB and their import methods.
+```
+from pyod.models.iforest import IForest
+from pyod.models.hbos import HBOS
+from pyod.models.pca import PCA
+from pyod.models.ocsvm import OCSVM
+from pyod.models.lof import LOF
+from pyod.models.cblof import CBLOF
+from pyod.models.cof import COF
+from pyod.models.knn import KNN
+from pyod.models.sod import SOD
+from pyod.models.ecod import ECOD
+from pyod.models.deep_svdd import DeepSVDD
+from pyod.models.loda import LODA
+from pyod.models.copod import COPOD
+from pyod.models.gmm import GMM
+
+def get_init_labels(self):
+        pseudo_models = {'pca':PCA(), 'iforest':IForest(), 'hbos':HBOS(), 'ocsvm':OCSVM(), 'lof':LOF(), 'cblof':CBLOF(), 'cof':COF(), 'knn':KNN(), 'sod':SOD(), 'ecod':ECOD(), 'deep_svdd':DeepSVDD(), 'loda':LODA(), 'copod':COPOD(), 'gmm':GMM()}
+        # model = IForest()
+        model = pseudo_models[self.config.pseudo_model]
+        model.fit(self.inputs)
+        score = model.decision_function(self.inputs)
+        score = MinMaxScaler().fit_transform(score.reshape(-1, 1))
+        return score
+```
+| Model              | Source        |
+| ------------------ | ------------- |
+| IForest            | [Link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.iforest)      |
+| 2_ALOI             | 62.09925      |
+| 3_annthyroid       | 55.46907      |
+| 4_Arrhythmia       | 39.06063      |
 
 ## Runtime of iterative training with 10 iterations on 84 tabular datasets.
 | Dataset            | time(seconds) |
