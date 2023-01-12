@@ -76,9 +76,19 @@ def get_init_labels(self):
 | Model              | Source        |
 | ------------------ | ------------- |
 | IForest            | [Link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.iforest)      |
-| 2_ALOI             | 62.09925      |
-| 3_annthyroid       | 55.46907      |
-| 4_Arrhythmia       | 39.06063      |
+| HBOS               | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.hbos)      |
+| LOF                | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.lof)      |
+| KNN                | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.knn)      |
+| PCA                | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.pca)              |
+| OCSVM              | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.ocsvm)              |
+| CBLOF              | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.cblof)             |
+| COF                | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.cof)             |
+| SOD                | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.sod)            |
+| ECOD               | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.ecod)     |
+| GMM                | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.gmm) |
+| LODA               | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.loda) |
+| COPOD              | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.copod) |
+| DeepSVDD           | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.deep_svdd) |
 
 ## Runtime of iterative training with 10 iterations on 84 tabular datasets.
 | Dataset            | time(seconds) |
