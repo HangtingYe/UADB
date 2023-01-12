@@ -47,7 +47,7 @@ Deep Support Vector Data Description (DeepSVDD) [paper](http://proceedings.mlr.p
 ## Parameters description of source UAD models.
 For all source UAD models, we use their default parameters in their original papers (which have been fine-tuned to achieve the best performance).
 Please refer to [PyOD](https://pyod.readthedocs.io/en/latest/pyod.models.html) for more information.
-The following codes show the example to import UAD models. Please see the Table for complete source UAD models included in UADB and their import methods.
+The following codes show the example to import UAD models. Please see the Table for complete source UAD models included in UADB and their parameter setting links.
 ```
 from pyod.models.iforest import IForest
 from pyod.models.hbos import HBOS
