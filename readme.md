@@ -178,5 +178,5 @@ For the default UADB Setup (i.e. 3-layer MLP, hidden dimension=128, epochs=10, b
 | 54_imdb            | 64.06704      |
 | 55_yelp            | 58.62         |
 
-## Surprising effects on source UAD's decision boundaries.
+## Surprising effects on source UAD's decision boundaries on synthetic datasets.
 ![image](figures/decision_boundary.png)
