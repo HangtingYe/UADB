@@ -396,10 +396,7 @@ class Pipeline(object):
                 self.tab_data.update_pseudo_label(scores)
                 self.tab_data.build_train_dataloaders()
                 self.tab_data.build_entire_dataloader()
-            # np.save(f'./Results/{self.config.data_path}_{self.config.model}_{self.config.pseudo_model}_{self.config.experiment_type}_best_aucroc_rep', self.best_aucroc_rep)
-            # np.save(f'./Results/{self.config.data_path}_{self.config.model}_{self.config.pseudo_model}_{self.config.experiment_type}_best_ap_rep', self.best_ap_rep)
-            np.save(f'./{read_file}/{self.config.data_path}_{self.config.model}_{self.config.pseudo_model}_{self.config.experiment_type}_best_aucroc_rep', self.best_aucroc_rep)
-            np.save(f'./{read_file}/{self.config.data_path}_{self.config.model}_{self.config.pseudo_model}_{self.config.experiment_type}_best_ap_rep', self.best_ap_rep)
+                
         elif self.config.experiment_type == 'base_mean_cascade' or self.config.experiment_type == 'base_std_cascade':
             for rep in range(50):
                 self.train()
