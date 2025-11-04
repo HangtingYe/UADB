@@ -6,11 +6,11 @@ Links: [<a href="https://arxiv.org/abs/2306.01997">arXiv</a>]
 
 **📥 Contact Email Update:** Please use **yeht22@mails.jlu.edu.cn** for all future communications. The previous email (yeht2118@mails.jlu.edu.cn) is no longer active.
 
-## What is UADB?
+## 📖 What is UADB?
 UADB is a booster for unsupervised anomaly detection (UAD) on tabular tasks.
 Note that UADB is not a universal winner on all taular tasks, however, it is a model-agnostic framework that can generally enhance any UAD on all types of tabular datasets in a unified way.
 
-## How to train?
+## 📚 How to train?
 Prepare (create Results first)
 * ```mkdir Results```
 
@@ -20,7 +20,7 @@ Select tabular data and source UAD needed to be enhanced
 Run UADB
 * ```python main.py```
 
-## Mainstream Unsupervised Anomaly Detection (UAD) Models.
+## 📕 Mainstream Unsupervised Anomaly Detection (UAD) Models.
 Isolation Forest (IForest) [paper](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest) that isolates observations by randomly selecting a feature and a splitting point;
 
 Histogram-based outlier detection (HBOS) [paper](https://www.goldiges.de/publications/HBOS-KI-2012.pdf) assumes the feature independence and calculates the degree of outlyingness by building histograms; 
@@ -49,7 +49,7 @@ Copula Based Outlier Detector (COPOD) [paper](https://arxiv.org/pdf/2009.09463.p
 
 Deep Support Vector Data Description (DeepSVDD) [paper](http://proceedings.mlr.press/v80/ruff18a/ruff18a.pdf) trains a neural network while minimizing the volume of a hypersphere that encloses the network representations of the data, the distance of the transformed embedding to the hypersphere's center is used to calculate the anomaly score.
 
-## Parameters description of source UAD models.
+## ⚙️ Parameters description of source UAD models.
 For all source UAD models, we use their default parameters in their original papers (which have been fine-tuned to achieve the best performance).
 Please refer to [PyOD](https://pyod.readthedocs.io/en/latest/pyod.models.html) for more information.
 The following codes show the example to import UAD models. Please see the Table for complete source UAD models included in UADB and their parameter setting links.
@@ -95,7 +95,7 @@ def get_init_labels(self):
 | COPOD              | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.copod) |
 | DeepSVDD           | [link](https://pyod.readthedocs.io/en/latest/pyod.models.html#module-pyod.models.deep_svdd) |
 
-## Runtime of iterative training with 10 iterations on 84 tabular datasets.
+## ⏳ Runtime of iterative training with 10 iterations on 84 tabular datasets.
 For the default UADB Setup (i.e. 3-layer MLP, hidden dimension=128, epochs=10, batch size=256, learning rate=0.001, training iterations=10), the average runtime on 84 tabular datasets is 49 seconds, the minimum runtime is 32 seconds and maximum runtime is 65 seconds (evaluated on an NVIDIA Tesla V100 GPU with 16 GiB RAM).
 | Dataset            | time (seconds) |
 | ------------------ | ------------- |
@@ -183,5 +183,18 @@ For the default UADB Setup (i.e. 3-layer MLP, hidden dimension=128, epochs=10, b
 | 54_imdb            | 64.06704      |
 | 55_yelp            | 58.62         |
 
-## Surprising effects on source UAD's decision boundaries on synthetic datasets.
+## 📊 Surprising effects on source UAD's decision boundaries on synthetic datasets.
 ![image](figures/decision_boundary.png)
+
+## 🤗 Citing the paper
+
+If our work is useful for your own, you can cite us with the following BibTex entry:
+
+    @inproceedings{ye2023uadb,
+    title={Uadb: Unsupervised anomaly detection booster},
+    author={Ye, Hangting and Liu, Zhining and Shen, Xinyi and Cao, Wei and Zheng, Shun and Gui, Xiaofan and Zhang, Huishuai and Chang, Yi and Bian, Jiang},
+    booktitle={2023 IEEE 39th International Conference on Data Engineering (ICDE)},
+    pages={2593--2606},
+    year={2023},
+    organization={IEEE}
+    }
