@@ -1,5 +1,10 @@
-Official code and data repository of [**UADB**: Unsupervised Anomaly Detection Booster].
-__Please star, watch, and fork UADB for the active updates!__
+<h1 align="center">
+[ICDE 2023]UADB: Unsupervised Anomaly Detection Booster
+
+Links: [<a href="https://arxiv.org/abs/2306.01997">arXiv</a>]
+</h1>
+
+**📥 Contact Email Update:** Please use **yeht22@mails.jlu.edu.cn** for all future communications. The previous email (yeht2118@mails.jlu.edu.cn) is no longer active.
 
 ## What is UADB?
 UADB is a booster for unsupervised anomaly detection (UAD) on tabular tasks.
